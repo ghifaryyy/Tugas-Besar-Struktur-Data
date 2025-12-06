@@ -100,13 +100,29 @@ adr_playlist createNodeParent_keongracun(int id, string nama);
 adr_lagu createNodeChild_keongracun(string judul, string album, string genre, int idlagu, int tahun, int durasi);
 adr_relasi createNodeRelasi_keongracun(adr_playlist P, adr_lagu L);
 
+// ===== ADMIN FUNCTION =====
 void adminAddLagu_keongracun(list_lagu &L, adr_lagu song);
 void displayAllLagu_keongracun(list_lagu L);
 void updateLagu_keongracun(adr_lagu &L, string new_judul, string new_album, string new_genre, int new_tahun, int new_durasi);
-void deleteLagu_keongracun(list_lagu &L, adr_lagu &song);   
+void deleteLagu_keongracun(list_lagu &L, adr_lagu &song);
 
 
+// ===== USER FUNCTION =====
+void addUser_keongracun(list_User &U, adr_User user);
+adr_User findUserById_keongracun(list_User U, int id);
+void CreatePlaylistForUser_keongracun(list_User &U, adr_User user, adr_playlist P);
 
+
+// ===== PLAYLIST FUNCTION =====
+void addPlaylist_keongracun(list_playlist &P, adr_playlist playlist);
+void displayAllPlaylist_keongracun(list_playlist P);
+void deletePlaylist_keongracun(list_playlist &P, adr_playlist &playlist);
+
+
+// ===== RELATIONSHIP FUNCTION =====
+void addSongToPlaylist_keongracun(adr_playlist P, adr_lagu L);
+void displaySongsInPlaylist_keongracun(adr_playlist P);
+void deleteSongFromPlaylist_keongracun(adr_playlist P, adr_lagu L);
 
 
 #endif
