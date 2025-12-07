@@ -460,7 +460,8 @@ void deleteSongFromPlaylist_keongracun(adr_playlist P, int idLagu) {
         cout << "Lagu dengan ID " << idLagu << " tidak ditemukan di playlist ini." << endl;
     }
 }
-// RELASI
+
+// fitur relasi
 void deleteRelasiLagu_keongracun(list_User &U, adr_lagu song){
     adr_User P = U.first;
 

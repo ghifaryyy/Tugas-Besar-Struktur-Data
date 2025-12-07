@@ -112,8 +112,7 @@ void menuAdmin_keongracun(list_User &U,list_lagu &L);
 void adminAddLagu_keongracun(list_lagu &L, adr_lagu song);
 void displayAllLagu_keongracun(list_lagu L);
 adr_lagu searchIdLagu_keongracun(list_lagu L, int idLagu);
-void updateLagu_keongracun(adr_lagu L, string new_nama, string new_judul, string new_album, string new_genre, int new_tahun,
-                           int new_durasi);
+void updateLagu_keongracun(adr_lagu L, string new_nama, string new_judul, string new_album, string new_genre, int new_tahun, int new_durasi);
 void adminDeleteLagu_keongracun(list_User &U, list_lagu &L, int id);
 void deleteLagu_keongracun(list_lagu &L, adr_lagu &song);
 
