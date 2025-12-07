@@ -4,8 +4,7 @@
 #include "tubes.h"
 using namespace std;
 
-int main()
-{
+int main(){
     list_User U;
     list_lagu L;
     list_playlist P;
