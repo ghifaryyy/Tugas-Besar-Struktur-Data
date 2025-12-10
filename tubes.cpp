@@ -419,6 +419,7 @@ void displayAllPlaylist(adr_User user){
         }
     }
 }
+
 void addSongToPlaylist_keongracun(adr_playlist P, adr_lagu L){
     adr_relasi R = createNodeRelasi_keongracun(P, L);
     if (P->relasi.first == nullptr && P->relasi.last == nullptr){
@@ -467,25 +468,12 @@ void deleteRelasiLagu_keongracun(list_User &U, adr_lagu song){
     while (P != nullptr){
         adr_playlist Q = P->Playlist.first;
         while (Q != nullptr){
-            adr_relasi R = Q->firstRelasi;
+            adr_relasi R = Q->relasi.first;
             while (R != nullptr){
-                adr_relasi nextR = R->next;
                 if (R->lagu == song){
-                    if (R == Q->firstRelasi){
-                        Q->firstRelasi = R->next;
-                        if (R->next != nullptr){
-                            R->next->prev = nullptr;
-                        }
-                    }
-                    else{
-                        R->prev->next = R->next;
-                        if (R->next != nullptr){
-                            R->next->prev = R->prev;
-                        }
-                    }
                     R->lagu = nullptr;
                 }
-                R = nextR;
+                R = R->next;
             }
             Q = Q->next;
         }
