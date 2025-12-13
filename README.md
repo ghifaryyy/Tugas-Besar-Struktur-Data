@@ -3,6 +3,8 @@
 ## 📝 Gambaran Umum (Overview)
 Aplikasi ini adalah sistem manajemen musik dan pemutar lagu berbasis **Command Line Interface (CLI)**. Dibangun menggunakan bahasa C++, program ini mengimplementasikan struktur data kompleks menggunakan **Multi Linked List** untuk memodelkan relasi antara *User*, *Playlist*, dan *Lagu*.
 
+Aplikasi ini dirancang sebagai replika layanan streaming musik modern yang memanfaatkan pointer. aplikasi ini menggunakan relasi **Many-to-Many**. Satu lagu dapat ditambahkan ke beberapa playlist dan user yang berbeda. Selain itu, aplikasi ini menyediakan fitur pemutar musik, yang memungkinkan navigasi lagu baik dalam antrian playlist maupun rekomendasi otomatis dari library utama.
+
 
 ## ✨ Fitur Utama (Key Features)
 
