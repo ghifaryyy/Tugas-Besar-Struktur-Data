@@ -26,7 +26,10 @@ Setiap user memiliki struktur data independen dengan fitur:
 * **Delete Playlist:** Menghapus playlist yang sudah tidak diinginkan.
 * **Add Song to Playlist:** Menambahkan lagu dari Library utama ke dalam Playlist pribadi (Membangun relasi).
 * **Remove Song from Playlist:** Menghapus lagu dari playlist tanpa menghapusnya dari Library utama.
-* **Search:** Mencari lagu berdasarkan nama Artis dan Judul Lagu.
+* **Search Lagu:** Mencari lagu berdasarkan nama Artis dan Judul Lagu.
+* **Search Playlist:** Mencari lagu berdasarkan id playlist.
+* **View Song From Playlist:** Melihat lagu dalam playlist.
+
 
 ### 🎶 4. Intelligent Music Player
 Pemutar musik simulasi dengan logika navigasi kontekstual:
