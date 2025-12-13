@@ -28,7 +28,7 @@ Setiap user memiliki struktur data independen dengan fitur:
 * **Remove Song from Playlist:** Menghapus lagu dari playlist tanpa menghapusnya dari Library utama.
 * **Search Lagu:** Mencari lagu berdasarkan nama Artis dan Judul Lagu.
 * **Search Playlist:** Mencari lagu berdasarkan id playlist.
-* **View Song From Playlist:** Melihat lagu dalam playlist.
+* **View Song In Playlist:** Melihat lagu dalam playlist.
 
 
 ### 🎶 4. Intelligent Music Player
