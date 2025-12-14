@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <iomanip>
 #include "tubes.h"
+
 using namespace std;
 
 int main(){
@@ -34,6 +35,7 @@ int main(){
 
         switch(pilih) {
         case 1:
+            clearScreen();
             menuAdmin_keongracun(U, L);
             break;
 
@@ -47,7 +49,10 @@ int main(){
             adr_User user = searchUser_keongracun(U, username);
             if (user != nullptr && password == user->info.username){
                 cout << "Login Berhasil!" << endl;
+                clearScreen();
                 menuUser_keongracun(user, L);
+            } else{
+                cout << "Username atau password salah!\n";
             }
             break;
         }

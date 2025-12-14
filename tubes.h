@@ -1,9 +1,9 @@
-#ifndef TUBES_H
-#define TUBES_H
-
+#ifndef TUBES.H
+#define TUBES.H
 
 #include <iostream>
 #include <cstdlib>
+#include <algorithm>
 #include <iomanip>
 using namespace std;
 
@@ -30,6 +30,8 @@ struct elmlist_user{
     infotype_user info;
     adr_User next;
     list_playlist Playlist;
+    adr_lagu currentSong;
+    adr_playlist activePlaylist;
 };
 
 // info Child
@@ -62,7 +64,6 @@ struct elmlist_playlist{
     infotype_playlist info;
     adr_playlist next;
     adr_playlist prev;
-    adr_relasi firstRelasi;
     list_relasi relasi;
 };
 
@@ -107,26 +108,39 @@ adr_playlist createNodeParent_keongracun(int id, string nama);
 adr_lagu createNodeChild_keongracun(int idlagu, string nama, string judul, string album, string genre, int tahun, int durasi);
 adr_relasi createNodeRelasi_keongracun(adr_playlist P, adr_lagu L);
 
-// ===== fitur admin =====
+// ===== FITUR ADMIN =====
 void menuAdmin_keongracun(list_User &U,list_lagu &L);
 void adminAddLagu_keongracun(list_lagu &L, adr_lagu song);
 void displayAllLagu_keongracun(list_lagu L);
 adr_lagu searchIdLagu_keongracun(list_lagu L, int idLagu);
-void updateLagu_keongracun(adr_lagu L, string new_nama, string new_judul, string new_album, string new_genre, int new_tahun, int new_durasi);
+adr_lagu searchNamaJudulLagu_keongracun(list_lagu L, string judul, string nama);
+void updateLagu_keongracun(adr_lagu L, string new_nama, string new_judul, string new_album, string new_genre, int new_tahun,
+                           int new_durasi);
 void adminDeleteLagu_keongracun(list_User &U, list_lagu &L, int id);
 void deleteLagu_keongracun(list_lagu &L, adr_lagu &song);
 
-// ===== fitur user =====
+// ===== FITUR USER =====
 void addUser_keongracun(list_User &U, adr_User userBaru);
 void menuUser_keongracun(adr_User user, list_lagu &L);
 adr_User searchUser_keongracun(list_User U, string username);
 adr_playlist searchIdPlaylist(list_playlist P, int id);
+int jumlahLaguPlaylist(adr_playlist P);
 void addSongToPlaylist_keongracun(adr_playlist P, adr_lagu L);
 void deleteSongFromPlaylist_keongracun(adr_playlist P, int idLagu);
 void displaySongsInPlaylist_keongracun(adr_playlist P);
 void userAddPlaylist_keongracun(adr_User user, int id, string nama);
 void DummyLagu_keongracun(list_lagu &L);
 void displayAllPlaylist(adr_User user);
+void deletePlaylist_keongracun(adr_User user, int idPlaylist);
+
+// ===== MUSIC PLAYER =====
+void playSong_keongracun(adr_User user, adr_lagu song, adr_playlist playlist);
+void playSongFromLibrary_keongracun(adr_User user, adr_lagu song);
+void stopSong_keongracun(adr_User user);
+void showNowPlaying_keongracun(adr_User user);
+void nextSong_keongracun(adr_User user, list_lagu L);
+void prevSong_keongracun(adr_User user, list_lagu L);
+void menuMusicPlayer_keongracun(adr_User user, list_lagu &L);
 
 // RELASI
 void deleteRelasiLagu_keongracun(list_User &U, adr_lagu song);
